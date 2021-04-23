@@ -1,0 +1,29 @@
+<div class="container">
+
+    <div class="card">
+  
+      <div class="card-header">
+
+       User List
+  
+      </div>
+      <div class="card-body">
+        <div class="table-responsive">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th scope="col">ID</th>
+                  <th scope="col">NAME</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let user of userData" (click)="senduser(user);">
+                  <td>{{user.id}}</td>
+                  <td>{{user.name}}</td>
+                <tr>
+              </tbody>
+            </table>
+          </div>
+      </div>
+    </div>
+  </div>

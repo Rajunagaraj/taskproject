@@ -1,0 +1,38 @@
+
+<a class="nav-link cursor" href="#" routerLink="/" >GO Back TO User-list</a>
+
+<div class="container">
+    <div class="card">
+      <div class="card-header">
+
+       User Details
+  
+      </div>
+      <div class="card-body">
+        <div class="table-responsive">
+            <table class="table table-bordered" *ngIf="userdetails?.length>=0">
+              <thead>
+                <tr >
+                  <td *ngFor="let users of columheaders;let i= index">{{users}}</td>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let user of userdetails">
+                  <td>{{user.id}}</td>
+                  <td>{{user.name}}</td>
+                  <td>{{user.username}}</td>
+                  <td>{{user.email}}</td>
+                  <td>{{user.address.street}}
+                     <br> {{user.address.suite}}<br>{{user.address.city}}<br>{{user.address.zipcode}}</td>
+                  <td>lat:{{user.address.geo.lat}},lng:{{user.address.geo.lng}}</td>
+                  <td>{{user.phone}}</td>
+                  <td>{{user.website}}</td>
+                  <td>{{user.company.name}}</td>
+                  
+                <tr>
+              </tbody>
+            </table>
+          </div>
+      </div>
+    </div>
+  </div>
